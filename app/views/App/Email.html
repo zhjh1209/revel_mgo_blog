@@ -1,0 +1,20 @@
+{{set . "title" "Email - GBlog" }}
+{{set . "email" "active" }}
+{{template "header.html" .}}
+<div class="content">
+    <div class="history-nav" id="his">
+       <div class="history-title">
+       All the emails
+       </div>
+       <div class="history-cell">
+        <p>
+        {{if .emails}}
+	    {{range $email := .emails}}
+		<a href="mailto:{{$email.Email}}">{{$email.Email}}&nbsp;&nbsp;{{$email.CDate.Format "2006-01-02 15:04"}}</a>
+        {{end}}
+    	{{end}}
+		</p>
+       </div>
+    </div>
+</div>
+{{template "footer.html" .}}

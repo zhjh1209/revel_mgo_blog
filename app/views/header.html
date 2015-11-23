@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+   <html>
+    <head>
+      <title>{{.title}}</title>
+      <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+      <link rel="stylesheet" type="text/css" href="/public/css/bootstrap.css">
+      <link rel="stylesheet" type="text/css" href="/public/css/styles.css">
+      <link rel="shortcut icon" type="image/png" href="/public/img/favicon.png">
+      <script src="/public/js/jquery-1.9.1.min.js" type="text/javascript" charset="utf-8"></script>
+    </head>
+    <body>
+		<div class="container main-nav">
+		    <div class="top-bar">
+			    <div class="top-bar-inner">
+			      <ul class="ul-nav ">
+			          <li class="{{.home}}">
+			            <a href="/" >Home</a>
+			            {{if .recentCnt}}
+			            {{if gt .recentCnt 0}}
+			            <span class="navbar-news " title="There is {{.recentCnt}} update in the last 1 hours">{{.recentCnt}}</span>
+			            {{end}}
+			            {{end}}
+			          </li>
+			          <li class="{{.write}}">
+			            <a href="/write" title="Put up your blogs">Submission</a>
+			          </li>
+			          <li class="{{.mess}}">
+			            <a href="/message" title="Message Boards">Message</a>
+			          </li>
+			          <li class="{{.history}}">
+			            <a href="/history" title="History blogs">File</a>
+			          </li>
+			          <li class="{{.about}}">
+			            <a href="/about" title="About Me">About Me</a>
+			          </li>
+			          <li class="{{.email}}">
+			            <a href="/email" title="The emails of the blog's author">Email</a>
+			          </li>
+			          <li>
+			            <a href="#" title="">RSS</a>
+			          </li>
+			      </ul>
+			    </div>
+			</div>
